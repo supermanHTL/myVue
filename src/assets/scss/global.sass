@@ -1,0 +1,26 @@
+$theme: #00A2FF;  //主题颜色
+
+//弹性布局，默认水平和垂直是居中（true）
+@mixin flexCenter($hor:true,$ver:true)
+  display: flex;
+  @if $hor
+    justify-content: center;
+  @if $ver
+    align-items: center;
+
+//边框
+//默认边框：下边框
+//默认颜色 #E6E6E6
+@mixin border($lef:'',$rig:'',$top:'',$bot:'bot',$color:#E6E6E6)
+  @if $lef != ''
+    border-left: 1px solid $color;
+  @else if $rig != ''
+    border-right: 1px solid $color;
+  @else if $top != ''
+    border-top: 1px solid $color;
+  @else if $bot != ''
+    border-bottom: 1px solid $color;
+
+@mixin img
+  display: block;
+  width: 100%;
